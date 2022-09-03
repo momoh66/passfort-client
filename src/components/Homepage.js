@@ -26,7 +26,7 @@ const Homepage = () => {
           <h1>no pages</h1>
         ) : (
           pages.titles.map((page) => (
-            <div>
+            <div key={page}>
               <a href={`page/${page}`}>{page}</a>
             </div>
           ))
