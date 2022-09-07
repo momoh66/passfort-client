@@ -1,5 +1,5 @@
 import React from 'react';
-import { getSpecificRevision, getAllPages} from '../api-calls/api';
+import { getSpecificRevision} from '../api-calls/api';
 import { useLocation } from 'react-router-dom';
 import '../styles/output.css';
 const Revisions = () => {
@@ -21,11 +21,11 @@ React.useEffect(() => {
     }
   };
   getData();
-}, []);
-console.log(page.data)
+}, [location]);
+// console.log(page.data)
   return (
     <div>
-      <div>hey world!!!</div>
+      <div>hey world!!</div>
       <div>{page.data}</div>
       <div>{page.title}</div>
     </div>
