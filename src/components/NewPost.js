@@ -26,11 +26,29 @@ const NewPost = () => {
   };
 
   return (
-    <div>
-      <h1>{`This is to make a new revision to the following article: ${location.pathname.replace(
-        '/page/new/',
-        ''
-      )} `}</h1>
+    <div className="min-h-full">
+      <nav className="bg-gray-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center ">
+            <div className="flex ">
+              <div className=" md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <h1
+                    className="bg-gray-700 text-white px-6  rounded-md text-xl font-extralight"
+                    aria-current="page"
+                  >
+                    {`This is to make a new revision to the following article: ${location.pathname.replace(
+                      '/page/new/',
+                      ''
+                    )} `}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       <form action="" onSubmit={handleSubmit}>
         <input
           placeholder="Enter your new revision here..."
@@ -42,7 +60,12 @@ const NewPost = () => {
           autoComplete="off"
           required
         />
-        <button type="submit">Post Revision</button>
+        <button
+          className="border mt-5 ml-2 p-3 bg-gray-700 text-white rounded-lg"
+          type="submit"
+        >
+          Post Revision
+        </button>
       </form>
     </div>
   );

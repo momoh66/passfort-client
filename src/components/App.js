@@ -14,7 +14,7 @@ const App = () => (
       <Route path="/page/:pages" element={<Page />} />
       <Route path="/page/:pages/:revisions" element={<Revisions />} />
       <Route path="/page/new/:pages" element={<NewPost />} />
-      <Route path="/tailwind" element={<Tailwind />} />
+      <Route path="/*" element={<Tailwind />} />
     </Routes>
   </BrowserRouter>
 );

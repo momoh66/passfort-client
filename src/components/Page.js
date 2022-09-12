@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getLatestPage, getAllRevisions } from '../api-calls/api';
 import '../styles/output.css';
 
+
 const Page = () => {
   const [page, setPage] = React.useState('');
   const [revisions, setRevisions] = React.useState('');
@@ -58,6 +59,7 @@ const Page = () => {
             </h2>
             <h3 className="font-bold"> The article reads </h3>
             <p>{page.data} </p>
+            
           </div>
           <div className="h-96 rounded-lg border-4 border-dashed border-gray-200">
             <p>
